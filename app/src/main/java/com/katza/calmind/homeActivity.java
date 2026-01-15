@@ -1,12 +1,14 @@
 package com.katza.calmind;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.TextView;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+
+
+import com.google.firebase.auth.FirebaseAuth;
 
 public class homeActivity extends AppCompatActivity {
 
@@ -26,7 +28,7 @@ public class homeActivity extends AppCompatActivity {
 
         out.setOnClickListener(v -> {
             FirebaseAuth.getInstance().signOut();
-            startActivity(new Intent(this, LoginActivity.class));
+            startActivity(new Intent(this, loginActivity.class));
             finish();
         });
     }
